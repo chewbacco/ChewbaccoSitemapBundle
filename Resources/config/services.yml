@@ -1,0 +1,7 @@
+parameters:
+    chewbakka_sitemap.generator_chain.class: Chewbakka\SitemapBundle\Services\SitemapGeneratorChain
+
+services:
+    chewbakka_sitemap.generator_chain:
+        class: %chewbakka_sitemap.generator_chain.class%
+        arguments: [ @router, { file_path: %kernel.root_dir%/../web/sitemaps.xml } ]
