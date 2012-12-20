@@ -1,0 +1,23 @@
+{
+    "name": "chewbakka/sitemap-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle is providing generating a site maps (sitemapindex supported).",
+    "keywords": ["seo","sitemap","sitemaps","sitemap index"],
+    "homepage": "https://github.com/Chewbakka/ChewbakkaSitemapBundle",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "Dmitry Tsoy",
+            "email": "hd.deman@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": ">=2.0,<2.2-dev",
+    },
+    "autoload": {
+        "psr-0": { "Chewbakka\\SitemapBundle": "" }
+    },
+    "target-dir": "Chewbakka/SitemapBundle"
+}
