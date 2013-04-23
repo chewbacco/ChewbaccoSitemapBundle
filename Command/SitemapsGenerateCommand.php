@@ -18,6 +18,8 @@ class SitemapsGenerateCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $this->output = $output;
+
         $host = $this->getContainer()->getParameter('host');
         $generator = $this->getContainer()->get('chewbacco_sitemap.generator_chain');
         $generator->getRouter()->getContext()->setHost($host);
@@ -28,7 +30,7 @@ class SitemapsGenerateCommand extends ContainerAwareCommand
 
     protected function sitemapReport($host)
     {
-        $this->logSection(date('Y-m-d H:i:s'), 'reporting about new sitemap on '.$host);
+        $this->output->logSection(date('Y-m-d H:i:s'), 'reporting about new sitemap on '.$host);
         $target_url = 'http://google.com/webmasters/sitemaps/ping?sitemap=http://'.$host.'/sitemaps/index.xml';
         curl_setopt($ch, CURLOPT_USERAGENT, 'ChewbaccoSitemapBundle');
         curl_setopt($ch, CURLOPT_URL, $target_url);
