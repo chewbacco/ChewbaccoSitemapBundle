@@ -1,11 +1,11 @@
 <?php
 
-namespace Chewbakka\SitemapBundle;
+namespace Chewbacco\SitemapBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Chewbakka\SitemapBundle\DependencyInjection\Compiler\SitemapGeneratorPass;
-class ChewbaccaSitemapBundle extends Bundle
+use Chewbacco\SitemapBundle\DependencyInjection\Compiler\SitemapGeneratorPass;
+class ChewbakkaSitemapBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
