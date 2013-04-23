@@ -1,5 +1,5 @@
 <?php
-namespace Chewbakka\SitemapBundle\Generator;
+namespace Chewbacco\SitemapBundle\Generator;
 
 class XmlSitemap
 {
