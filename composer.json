@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "This bundle is providing generating a site maps (sitemapindex supported).",
     "keywords": ["seo","sitemap","sitemaps","sitemap index"],
-    "homepage": "https://github.com/Chewbacco/ChewbaccoSitemapBundle",
+    "homepage": "https://github.com/chewbacco/ChewbaccoSitemapBundle",
     "license": "Apache2",
     "authors": [
         {
