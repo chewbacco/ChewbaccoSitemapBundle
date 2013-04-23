@@ -29,7 +29,7 @@ class SitemapsGenerateCommand extends ContainerAwareCommand
     protected function sitemapReport($host)
     {
         $this->logSection(date('Y-m-d H:i:s'), 'reporting about new sitemap on '.$host);
-        $target_url = 'http://google.com/webmasters/sitemaps/ping?sitemap=http://'.$host.'/sitemaps.xml';
+        $target_url = 'http://google.com/webmasters/sitemaps/ping?sitemap=http://'.$host.'/sitemaps/index.xml';
         curl_setopt($ch, CURLOPT_USERAGENT, 'ChewbaccoSitemapBundle');
         curl_setopt($ch, CURLOPT_URL, $target_url);
         curl_setopt($ch, CURLOPT_FAILONERROR, true);
