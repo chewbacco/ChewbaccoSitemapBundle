@@ -1,5 +1,5 @@
 {
-    "name": "chewbaccc/sitemap-bundle",
+    "name": "chewbacco/sitemap-bundle",
     "type": "symfony-bundle",
     "description": "This bundle is providing generating a site maps (sitemapindex supported).",
     "keywords": ["seo","sitemap","sitemaps","sitemap index"],
