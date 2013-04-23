@@ -1,5 +1,5 @@
 <?php
-namespace Chewbakka\SitemapBundle\Command;
+namespace Chewbacco\SitemapBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,30 +12,30 @@ class SitemapsGenerateCommand extends ContainerAwareCommand
     {
         parent::configure();
 
-        $this->setName('chewbakka:sitemap:generate')
+        $this->setName('chewbacco:sitemap:generate')
              ->setDescription('Generate sitemaps files.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $host = $this->getContainer()->getParameter('host');
-        $generator = $this->getContainer()->get('chewbakka_sitemap.generator_chain');
+        $generator = $this->getContainer()->get('chewbacco_sitemap.generator_chain');
         $generator->getRouter()->getContext()->setHost($host);
         $generator->generate();
         $generator->generateIndex();
-        $generator->sitemapReport($host);
+        $this->sitemapReport($host);
     }
 
     protected function sitemapReport($host)
     {
         $this->logSection(date('Y-m-d H:i:s'), 'reporting about new sitemap on '.$host);
         $target_url = 'http://google.com/webmasters/sitemaps/ping?sitemap=http://'.$host.'/sitemaps.xml';
-        curl_setopt($ch, CURLOPT_USERAGENT, 'ChewbakkaSitemapBundle');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'ChewbaccoSitemapBundle');
         curl_setopt($ch, CURLOPT_URL, $target_url);
         curl_setopt($ch, CURLOPT_FAILONERROR, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 80);
         curl_setopt($ch, CURLOPT_MAXREDIRS, 6);
 

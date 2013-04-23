@@ -1,7 +1,7 @@
 <?php
-namespace Chewbakka\SitemapBundle\Generator;
+namespace Chewbacco\SitemapBundle\Generator;
 use Symfony\Component\Routing\RouterInterface;
-use Chewbakka\SitemapBundle\Generator\XmlSitemap;
+use Chewbacco\SitemapBundle\Generator\XmlSitemap;
 
 abstract class SitemapGenerator implements SitemapGeneratorInterface
 {
