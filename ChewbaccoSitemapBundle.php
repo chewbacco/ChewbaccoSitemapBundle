@@ -5,7 +5,7 @@ namespace Chewbacco\SitemapBundle;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Chewbacco\SitemapBundle\DependencyInjection\Compiler\SitemapGeneratorPass;
-class ChewbakkaSitemapBundle extends Bundle
+class ChewbaccoSitemapBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {
