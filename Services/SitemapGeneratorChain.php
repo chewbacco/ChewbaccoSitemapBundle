@@ -1,7 +1,9 @@
 <?php
-namespace Chewbakka\SitemapBundle\Services;
+namespace Chewbacco\SitemapBundle\Services;
+
 use Symfony\Component\Routing\RouterInterface;
-use Chewbakka\SitemapBundle\Generator\SitemapGeneratorInterface;
+use Chewbacco\SitemapBundle\Generator\SitemapGeneratorInterface;
+
 class SitemapGeneratorChain
 {
     private $router;
@@ -21,10 +23,10 @@ class SitemapGeneratorChain
         $this->generators[] = $generator;
     }
 
-  public function getRouter()
-  {
-      return $this->router;
-  }
+    public function getRouter()
+    {
+        return $this->router;
+    }
 
     public function generate()
     {
