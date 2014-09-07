@@ -2,7 +2,7 @@
     "name": "chewbacco/sitemap-bundle",
     "type": "symfony-bundle",
     "description": "This bundle is providing generating a site maps (sitemapindex supported).",
-    "keywords": ["seo","sitemap","sitemaps","sitemap index"],
+    "keywords": ["seo", "sitemap", "sitemaps", "sitemap index"],
     "homepage": "https://github.com/chewbacco/ChewbaccoSitemapBundle",
     "license": "Apache2",
     "authors": [
@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "sensio/framework-extra-bundle": "2.3.*"
+        "sensio/framework-extra-bundle": "~3.0"
     },
     "require-dev": {
         "sensio/framework-extra-bundle": "*"
